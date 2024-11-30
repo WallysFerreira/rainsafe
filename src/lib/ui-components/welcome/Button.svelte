@@ -1,7 +1,24 @@
+  <!-- Does ssoIconUrl and iconAlt really need to be a state? -->
 <script>
   import '$src/app.css';
 
-  let { text, widthInVw = 50, heightInVh = 5.5, isGoogle, isFacebook } = $props();
+  let ssoIconUrl = $state("");
+  let iconAlt = $state("");
+
+  let { text, widthInVw = 50, heightInVh = 5.5, ssoPlatform } = $props();
+
+  if (ssoPlatform) {
+    ssoPlatform = ssoPlatform.toLowerCase();
+
+    ssoIconUrl = `/ssoIcons/${ssoPlatform}.png`;
+    iconAlt = `${ssoPlatform} icon`;
+    text = `Entrar com ${capitalizeString(ssoPlatform)}`;
+  }
+
+  function capitalizeString(stringToCapitalize) {
+      return stringToCapitalize.charAt(0).toUpperCase() + stringToCapitalize.slice(1);
+  } 
+
 </script>
 
 <style>
@@ -17,11 +34,9 @@
 </style>
 
 <button style="height: {heightInVh}vh; width: {widthInVw}vw">
-  {#if isGoogle}
-    To-do google
-  {:else if isFacebook}
-    To-do facebook
-  {:else}
-    {text}
+  {#if ssoPlatform}
+    <img src={ssoIconUrl} alt={iconAlt}/>
   {/if}
+
+  {text}
 </button>
