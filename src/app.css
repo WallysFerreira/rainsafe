@@ -3,3 +3,12 @@
   --secondary-color: #fff;
   --tertiary-color: #F5EBE0;
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
