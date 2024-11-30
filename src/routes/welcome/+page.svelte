@@ -15,7 +15,7 @@
   }
 </style>
 
-<h1>Logo RainSafe</h1>
+<img src="/raincife.png" alt="Raincife logo" />
 
 <Button text="Cadastrar-se" fontSizeInEm=1.1 widthInVw=62.7 heightInVh=6.25 />
 <p>Já possui uma conta?</p>
