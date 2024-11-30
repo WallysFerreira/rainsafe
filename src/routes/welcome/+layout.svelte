@@ -12,7 +12,6 @@
     }
 
   :global(h1, p, a) {
-      font-family: Montserrat;
       color: white;
       text-decoration: none;
     }
