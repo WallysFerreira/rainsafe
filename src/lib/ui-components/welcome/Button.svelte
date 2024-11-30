@@ -1,9 +1,7 @@
 <script>
   import '$src/app.css';
 
-  export let text;
-  export let widthInVw = 50;
-  export let heightInVh = 5.5;
+  let { text, widthInVw = 50, heightInVh = 5.5, isSso } = $props();
 </script>
 
 <style>
@@ -19,5 +17,9 @@
 </style>
 
 <button style="height: {heightInVh}vh; width: {widthInVw}vw">
-  {text}
+  {#if isSso}
+    Todo
+  {:else}
+    {text}
+  {/if}
 </button>
