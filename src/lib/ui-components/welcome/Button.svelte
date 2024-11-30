@@ -5,7 +5,7 @@
   let ssoIconUrl = $state("");
   let iconAlt = $state("");
 
-  let { text, fontSizeInEm = 0.9, widthInVw = 50, heightInVh = 5.5, ssoPlatform } = $props();
+  let { text, fontSizeInEm = 0.9, widthInVw = 50, heightInVh = 5.5, ssoPlatform, onclick } = $props();
 
   if (ssoPlatform) {
     ssoPlatform = ssoPlatform.toLowerCase();
@@ -36,7 +36,7 @@
   }
 </style>
 
-<button style="height: {heightInVh}vh; width: {widthInVw}vw; font-size: {fontSizeInEm}em;" >
+<button style="height: {heightInVh}vh; width: {widthInVw}vw; font-size: {fontSizeInEm}em;" onclick={onclick}>
     {#if ssoPlatform}
       <img src={ssoIconUrl} alt={iconAlt}/>
     {/if}

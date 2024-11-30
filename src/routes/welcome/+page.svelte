@@ -1,4 +1,5 @@
 <script>
+  import { goto } from '$app/navigation';
   import Button from '$lib/ui-components/welcome/Button.svelte';
 </script>
 
@@ -40,7 +41,7 @@
   <img src="/raincife.png" alt="Raincife logo" style="width: 144px;"/>
 
   <div id="mainButtons">
-    <Button text="Cadastrar-se" fontSizeInEm=1.1 widthInVw=62.7 heightInVh=6.25 />
+    <Button text="Cadastrar-se" fontSizeInEm=1.1 widthInVw=62.7 heightInVh=6.25 onclick={() => goto("/welcome/signup")} />
     <p style="margin-top: 2vh">Já possui uma conta?</p>
     <a href="/welcome/login">Faça login</a>
   </div>
