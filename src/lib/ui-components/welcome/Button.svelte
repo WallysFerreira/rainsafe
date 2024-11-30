@@ -32,10 +32,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
   }
 </style>
 
-<button style="height: {heightInVh}vh; width: {widthInVw}vw; font-size: {fontSizeInEm}em; justify-content: space-around;" >
+<button style="height: {heightInVh}vh; width: {widthInVw}vw; font-size: {fontSizeInEm}em;" >
     {#if ssoPlatform}
       <img src={ssoIconUrl} alt={iconAlt}/>
     {/if}
