@@ -8,12 +8,11 @@
   --default-font: 'Montserrat';
 }
 
-body, html, p {
+body, html, h1, a, p {
   margin: 0;
   padding: 0;
 }
 
 h1, a, p {
-  margin: 0;
   font-family: var(--default-font);
 }
