@@ -23,19 +23,22 @@
 
 <style>
   button {
-      color: var(--primary-color);
-      background-color: var(--tertiary-color);
-      border-radius: 4.5vw;
-      font-weight: bold;
-      padding: 0;
-      border: none;
-    }
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+    border-radius: 4.5vw;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 </style>
 
-<button style="height: {heightInVh}vh; width: {widthInVw}vw; font-size: {fontSizeInEm}em;">
-  {#if ssoPlatform}
-    <img src={ssoIconUrl} alt={iconAlt}/>
-  {/if}
+<button style="height: {heightInVh}vh; width: {widthInVw}vw; font-size: {fontSizeInEm}em; justify-content: space-around;" >
+    {#if ssoPlatform}
+      <img src={ssoIconUrl} alt={iconAlt}/>
+    {/if}
 
-  {text}
+    {text}
 </button>
