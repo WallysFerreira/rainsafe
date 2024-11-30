@@ -1,7 +1,7 @@
 <script>
   import '$src/app.css';
 
-  let { text, widthInVw = 50, heightInVh = 5.5, isSso } = $props();
+  let { text, widthInVw = 50, heightInVh = 5.5, isGoogle, isFacebook } = $props();
 </script>
 
 <style>
@@ -17,8 +17,10 @@
 </style>
 
 <button style="height: {heightInVh}vh; width: {widthInVw}vw">
-  {#if isSso}
-    Todo
+  {#if isGoogle}
+    To-do google
+  {:else if isFacebook}
+    To-do facebook
   {:else}
     {text}
   {/if}
