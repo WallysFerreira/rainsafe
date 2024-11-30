@@ -4,7 +4,7 @@
   --tertiary-color: #F5EBE0;
 }
 
-body, html {
+body, html, p {
   margin: 0;
   padding: 0;
 }

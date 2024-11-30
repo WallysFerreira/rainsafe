@@ -2,13 +2,24 @@
   import Button from '$lib/ui-components/welcome/Button.svelte';
 </script>
 
-<div>
-  <h1>Logo RainSafe</h1>
+<style>
+  a {
+      display: block;
+      padding: 2vh 0;
+      text-align: center;
+      text-decoration: underline white;
+  }
 
-  <Button text="Cadastrar-se" widthInVw=62.7 heightInVh=6.25 />
-  <p>Já possui uma conta?</p>
-  <a href="/welcome/login">Faça login</a>
+  a, p {
+      font-size: 1.1em;
+  }
+</style>
 
-  <Button ssoPlatform="Google" widthInVw=64 heightInVh=4 />
-  <Button ssoPlatform="faceBook" widthInVw=64 heightInVh=4 />
-</div>
+<h1>Logo RainSafe</h1>
+
+<Button text="Cadastrar-se" widthInVw=62.7 heightInVh=6.25 />
+<p>Já possui uma conta?</p>
+<a href="/welcome/login">Faça login</a>
+
+<Button ssoPlatform="Google" widthInVw=64 heightInVh=4 />
+<Button ssoPlatform="faceBook" widthInVw=64 heightInVh=4 />
