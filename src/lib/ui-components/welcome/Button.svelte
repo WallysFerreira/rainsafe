@@ -1,4 +1,4 @@
-  <!-- Does ssoIconUrl and iconAlt really need to be a state? -->
+<!-- Does ssoIconUrl and iconAlt really need to be a state? -->
 <script>
   import '$src/app.css';
 
