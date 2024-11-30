@@ -34,6 +34,11 @@
     align-items: center;
     justify-content: space-around;
   }
+
+  button:active {
+    background-color: grey;
+    transition: all 0.5s;
+  }
 </style>
 
 <button style="height: {heightInVh}vh; width: {widthInVw}vw; font-size: {fontSizeInEm}em;" onclick={onclick}>
