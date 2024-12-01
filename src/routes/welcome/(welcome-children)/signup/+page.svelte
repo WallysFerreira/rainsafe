@@ -29,50 +29,63 @@
   .addressBlock select {
     width: 100%;
   }
+
+  label {
+    display: flex;
+    flex-direction: column;
+  }
 </style>
 
 <form>
-  <div>
-    <p>Email</p>
+  <label>
+    Email
     <Input type="email" />
-  </div>
+  </label>
 
-  <div>
-    <p>Senha</p>
+  <label>
+    Senha
     <Input type="password" />
-  </div>
+  </label>
 
-  <div>
-    <p>Confirme a senha</p>
+  <label>
+    Confirme a senha
     <Input type="password" />
-  </div>
+  </label>
 
-  <div style="width: 185px; height: 40px;">
-    <p>Data de nascimento</p>
+  <label style="width: 185px; height: 40px;">
+    Data de nascimento
     <Input type="date" style="width: 100%;"/>
-  </div>
+  </label>
 
   <div id="addressDiv">
     <p style="font-weight: bold; font-size: 1.2em;">Endereço</p>
 
     <div class="addressBlock">
-      <p>Rua</p>
-      <Input type="text" style="width: 100%"/>
+      <label>
+        Rua
+        <Input type="text" style="width: 100%"/>
+      </label>
 
-      <p>Número</p>
-      <Input type="number" style="width: 100%;"/>
+      <label>
+        Número
+        <Input type="number" style="width: 100%;"/>
+      </label>
     </div>
 
     <div class="addressBlock">
-      <p>Cidade</p>
-      <select name="city" id="citySelect" style="height: 3.5vh; background-color: var(--tertiary-color); border-radius: 5px;">
-        {#each data.cityNames as city}
-          <option value={city}>{city}</option>
-        {/each}
-      </select>
+      <label>
+        Cidade
+        <select name="city" id="citySelect" style="height: 3.5vh; background-color: var(--tertiary-color); border-radius: 5px;">
+          {#each data.cityNames as city}
+            <option value={city}>{city}</option>
+          {/each}
+        </select>
+      </label>
 
-      <p>Bairro</p>
-      <Input type="text" style="width: 100%;"/>
+      <label>
+        Bairro
+        <Input type="text" style="width: 100%;"/>
+      </label>
     </div>
   </div>
 

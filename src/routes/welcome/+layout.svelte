@@ -15,7 +15,7 @@
       align-items: center;
     }
 
-  :global(h1, p, a) {
+  :global(h1, p, a, label) {
       color: white;
       text-decoration: none;
     }
