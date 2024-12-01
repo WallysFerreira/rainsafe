@@ -39,12 +39,12 @@
 <form>
   <label>
     Email
-    <Input type="email" />
+    <Input name="email" type="email" />
   </label>
 
   <label>
     Senha
-    <Input type="password" />
+    <Input name="password" type="password" />
   </label>
 
   <label>
@@ -54,7 +54,7 @@
 
   <label style="width: 185px; height: 40px;">
     Data de nascimento
-    <Input type="date" style="width: 100%;"/>
+    <Input name="birthDate" type="date" style="width: 100%;"/>
   </label>
 
   <div id="addressDiv">
@@ -63,12 +63,12 @@
     <div class="addressBlock">
       <label>
         Rua
-        <Input type="text" style="width: 100%"/>
+        <Input name="street" type="text" style="width: 100%"/>
       </label>
 
       <label>
         Número
-        <Input type="number" style="width: 100%;"/>
+        <Input name="number" type="number" style="width: 100%;"/>
       </label>
     </div>
 
@@ -84,7 +84,7 @@
 
       <label>
         Bairro
-        <Input type="text" style="width: 100%;"/>
+        <Input name="neighbourhood" type="text" style="width: 100%;"/>
       </label>
     </div>
   </div>
