@@ -39,27 +39,27 @@
 <form method="POST">
   <label>
     Nome completo
-    <Input type="password" />
+    <Input type="text" required/>
   </label>
 
   <label>
     Telefone
-    <Input name="phone" type="text" />
+    <Input name="phone" type="text" placeholder="DDD + Numero"pattern="\d{11}" />
   </label>
 
   <label>
     Email
-    <Input name="email" type="email" />
+    <Input name="email" type="email" required />
   </label>
 
   <label>
     Senha
-    <Input name="password" type="password" />
+    <Input name="password" type="password" required />
   </label>
 
   <label style="width: 185px; height: 40px;">
     Data de nascimento
-    <Input name="birthDate" type="date" style="width: 100%;"/>
+    <Input name="birthDate" type="date" style="width: 100%;" required />
   </label>
 
   <div id="addressDiv">

@@ -1,7 +1,7 @@
 <script>
   import '$src/app.css';
 
-  let { type, style = "", name } = $props();
+  let { type, style = "", name, placeholder, pattern, required } = $props();
 </script>
 
 <style>
@@ -13,5 +13,5 @@
   }
 </style>
 
-<input name={name} type={type} style={style} />
+<input name={name} type={type} style={style} placeholder={placeholder} pattern={pattern} required={required}/>
 
