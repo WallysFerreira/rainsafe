@@ -14,10 +14,15 @@
 <p>Data de nascimento</p>
 <input type="date" />
 
-<p>Localização</p>
-<select name="location" id="locationSelect">
-  <option value="loc1">Localizacao 1</option>
-</select>
+<p style="font-weight: bold; font-size: 1.2em;">Endereço</p>
+<p>Rua</p>
+<input type="text" />
+<p>Número</p>
+<input type="number" />
+<p>Cidade</p>
+<input type="text" />
+<p>Bairro</p>
+<input type="text" />
 
 <Button text="Criar conta"/>
 
