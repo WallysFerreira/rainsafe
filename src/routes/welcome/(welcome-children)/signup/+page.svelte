@@ -68,19 +68,19 @@
     <div class="addressBlock">
       <label>
         Rua
-        <Input name="street" type="text" style="width: 100%"/>
+        <Input name="street" type="text" style="width: 100%" required/>
       </label>
 
       <label>
         Número
-        <Input name="number" type="number" style="width: 100%;"/>
+        <Input name="number" type="number" style="width: 100%;" required/>
       </label>
     </div>
 
     <div class="addressBlock">
       <label>
         Cidade
-        <select name="city" id="citySelect" style="height: 3.5vh; background-color: var(--tertiary-color); border-radius: 5px;">
+        <select name="city" id="citySelect" required style="height: 3.5vh; background-color: var(--tertiary-color); border-radius: 5px;">
           {#each data.cityNames as city}
             <option value={city}>{city}</option>
           {/each}
@@ -89,7 +89,7 @@
 
       <label>
         Bairro
-        <Input name="neighbourhood" type="text" style="width: 100%;"/>
+        <Input name="neighbourhood" type="text" style="width: 100%;" required/>
       </label>
     </div>
   </div>
