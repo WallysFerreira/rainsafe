@@ -1,4 +1,5 @@
 <script>
+  import { goto } from '$app/navigation';
   let { children } = $props();
 </script>
 
@@ -21,7 +22,7 @@
 </style>
 
 <nav>
-  <button>
+  <button onclick={() => goto("/welcome")}>
     <img src="/back.png" alt="Button to go back" />
   </button>
 
