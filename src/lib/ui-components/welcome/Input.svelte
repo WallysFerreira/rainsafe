@@ -1,7 +1,16 @@
 <script>
   import '$src/app.css';
 
-  let { type, style = "", name, placeholder, pattern, required } = $props();
+  let {
+    type,
+    style = "",
+    name,
+    placeholder,
+    pattern,
+    required,
+    minlength,
+    maxlength
+  } = $props();
 </script>
 
 <style>
@@ -13,5 +22,5 @@
   }
 </style>
 
-<input name={name} type={type} style={style} placeholder={placeholder} pattern={pattern} required={required}/>
+<input name={name} type={type} style={style} placeholder={placeholder} pattern={pattern} required={required} minlength={minlength} maxlength={maxlength} />
 

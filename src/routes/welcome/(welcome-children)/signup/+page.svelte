@@ -44,7 +44,7 @@
 
   <label>
     Telefone
-    <Input name="phone" type="text" placeholder="DDD + Numero"pattern="\d{11}" />
+    <Input name="phone" type="text" placeholder="DDD + Numero" pattern="[0-9]*" minlength="11" maxlength="11" />
   </label>
 
   <label>
