@@ -9,6 +9,10 @@
       background-color: var(--primary-color);
       width: 100vw;
       height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
     }
 
   :global(h1, p, a) {
