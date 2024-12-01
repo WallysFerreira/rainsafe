@@ -1,5 +1,6 @@
 <script>
   import Button from '$lib/ui-components/welcome/Button.svelte';
+  import Input from '$lib/ui-components/welcome/Input.svelte';
 
   let { data } = $props();
 </script>
@@ -7,7 +8,7 @@
 <style>
   form {
     width: 100%;
-    height: calc(66% - 66px);
+    height: calc(76% - 66px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +26,7 @@
     width: 100%;
   }
 
-  .addressBlock input, select {
+  .addressBlock select {
     width: 100%;
   }
 </style>
@@ -33,22 +34,22 @@
 <form>
   <div>
     <p>Email</p>
-    <input type="email" />
+    <Input type="email" />
   </div>
 
   <div>
     <p>Senha</p>
-    <input type="password" />
+    <Input type="password" />
   </div>
 
   <div>
     <p>Confirme a senha</p>
-    <input type="password" />
+    <Input type="password" />
   </div>
 
   <div style="width: 185px; height: 40px;">
     <p>Data de nascimento</p>
-    <input type="date" style="width: 100%;"/>
+    <Input type="date" style="width: 100%;"/>
   </div>
 
   <div id="addressDiv">
@@ -56,10 +57,10 @@
 
     <div class="addressBlock">
       <p>Rua</p>
-      <input type="text" />
+      <Input type="text" style="width: 100%"/>
 
       <p>Número</p>
-      <input type="number" />
+      <Input type="number" style="width: 100%;"/>
     </div>
 
     <div class="addressBlock">
@@ -71,7 +72,7 @@
       </select>
 
       <p>Bairro</p>
-      <input type="text" />
+      <Input type="text" style="width: 100%;"/>
     </div>
   </div>
 
