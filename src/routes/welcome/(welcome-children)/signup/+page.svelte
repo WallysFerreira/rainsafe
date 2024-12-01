@@ -1,5 +1,7 @@
 <script>
   import Button from '$lib/ui-components/welcome/Button.svelte';
+
+  let { data } = $props();
 </script>
 
 <p>Email ou número de telefone</p>
@@ -20,7 +22,11 @@
 <p>Número</p>
 <input type="number" />
 <p>Cidade</p>
-<input type="text" />
+<select name="city" id="citySelect">
+  {#each data.cityNames as city}
+    <option value={city}>{city}</option>
+  {/each}
+</select>
 <p>Bairro</p>
 <input type="text" />
 
