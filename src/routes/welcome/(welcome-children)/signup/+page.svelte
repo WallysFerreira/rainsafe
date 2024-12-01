@@ -36,7 +36,7 @@
   }
 </style>
 
-<form>
+<form method="POST">
   <label>
     Email
     <Input name="email" type="email" />
