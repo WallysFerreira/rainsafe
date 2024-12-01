@@ -38,6 +38,16 @@
 
 <form method="POST">
   <label>
+    Nome completo
+    <Input type="password" />
+  </label>
+
+  <label>
+    Telefone
+    <Input name="phone" type="text" />
+  </label>
+
+  <label>
     Email
     <Input name="email" type="email" />
   </label>
@@ -45,11 +55,6 @@
   <label>
     Senha
     <Input name="password" type="password" />
-  </label>
-
-  <label>
-    Confirme a senha
-    <Input type="password" />
   </label>
 
   <label style="width: 185px; height: 40px;">
