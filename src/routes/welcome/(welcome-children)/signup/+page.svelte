@@ -65,7 +65,7 @@
 
     <div class="addressBlock">
       <p>Cidade</p>
-      <select name="city" id="citySelect">
+      <select name="city" id="citySelect" style="height: 3.5vh; background-color: var(--tertiary-color); border-radius: 5px;">
         {#each data.cityNames as city}
           <option value={city}>{city}</option>
         {/each}
