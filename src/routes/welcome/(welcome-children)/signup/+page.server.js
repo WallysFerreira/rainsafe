@@ -1,5 +1,7 @@
+import { API_BASE_URL, IBGE_PE_CITIES_URL } from '$env/static/private';
+
 export async function load({ fetch, params }) {
-  const res = await fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados/PE/municipios");
+  const res = await fetch(IBGE_PE_CITIES_URL);
   const rawCities = await res.json();
   let cityNames = rawCities.map(city => city.nome);
 
@@ -14,7 +16,17 @@ export const actions = {
     const data = await request.formData();
     const user = makeApiCompatibleUserFromFormData(data);
 
-    console.log(user);
+    console.log(JSON.stringify(user));
+
+    const res = await fetch(API_BASE_URL + "/api/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(user)
+    });
+
+    console.log(res);
   }
 }
 
@@ -26,7 +38,7 @@ function makeApiCompatibleUserFromFormData(formData) {
     senha: formData.get("password"),
     endereco: {
       rua: formData.get("street"),
-      numero: formData.get("number"),
+      numero: formData.get("number").toString(),
       bairro: formData.get("neighbourhood"),
       cidade: formData.get("city")
     }
