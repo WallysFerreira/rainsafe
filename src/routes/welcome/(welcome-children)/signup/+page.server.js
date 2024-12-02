@@ -12,6 +12,23 @@ export async function load({ fetch, params }) {
 export const actions = {
   default: async ({ cookies, request }) => {
     const data = await request.formData();
-    console.log(data);
+    const user = makeApiCompatibleUserFromFormData(data);
+
+    console.log(user);
+  }
+}
+
+function makeApiCompatibleUserFromFormData(formData) {
+  return {
+    nomeCompleto: formData.get("fullName"),
+    telefone: formData.get("phone"),
+    email: formData.get("email"),
+    senha: formData.get("password"),
+    endereco: {
+      rua: formData.get("street"),
+      numero: formData.get("number"),
+      bairro: formData.get("neighbourhood"),
+      cidade: formData.get("city")
+    }
   }
 }
