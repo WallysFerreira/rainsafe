@@ -27,7 +27,7 @@
     <img src="/back.png" alt="Button to go back" />
   </button>
 
-  <img src="/raincife.png" alt="Raincife logo" id="raincifeLogo"/>
+  <div style="width: 66px; height: 66px;" id="raincifeLogo"></div>
 
   <div style="width: 10vw;"></div>
 </nav>

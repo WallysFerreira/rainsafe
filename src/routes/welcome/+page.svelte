@@ -38,7 +38,7 @@
 </style>
 
 <div id="wrapper">
-  <img src="/raincife.png" alt="Raincife logo" style="width: 144px;"/>
+  <div style="width: 66px;"></div>
 
   <div id="mainButtons">
     <Button text="Cadastrar-se" fontSizeInEm=1.1 widthInVw=62.7 heightInVh=6.25 onclick={() => goto("/welcome/signup")} />
