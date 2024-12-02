@@ -39,7 +39,7 @@
 <form method="POST">
   <label>
     Nome completo
-    <Input type="text" required/>
+    <Input name="fullName" type="text" required/>
   </label>
 
   <label>
@@ -57,10 +57,12 @@
     <Input name="password" type="password" required />
   </label>
 
+  <!--
   <label style="width: 185px; height: 40px;">
     Data de nascimento
     <Input name="birthDate" type="date" style="width: 100%;" required />
   </label>
+  -->
 
   <div id="addressDiv">
     <p style="font-weight: bold; font-size: 1.2em;">Endereço</p>
