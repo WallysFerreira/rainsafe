@@ -16,17 +16,13 @@ export const actions = {
     const data = await request.formData();
     const user = makeApiCompatibleUserFromFormData(data);
 
-    console.log(JSON.stringify(user));
-
-    const res = await fetch(API_BASE_URL + "/api/users", {
+    await fetch(API_BASE_URL + "/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(user)
     });
-
-    console.log(res);
   }
 }
 

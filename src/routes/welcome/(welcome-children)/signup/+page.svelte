@@ -54,7 +54,7 @@
 
   <label>
     Senha
-    <Input name="password" type="password" required />
+    <Input name="password" type="password" minlength="6" required />
   </label>
 
   <!--
